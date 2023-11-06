@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nginx:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./src/conf:/etc/nginx/conf.d
+      - ./src/html:/usr/share/nginx/html
+      - ./src/logs:/var/log/nginx
+
